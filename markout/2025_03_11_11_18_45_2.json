@@ -1,0 +1,12 @@
+{
+    "video_name": "2025_03_11_11_18_45_2",
+    "relative_path": "video/2025_03_11_11_18_45_2",
+    "description": "Video annotation file.",
+    "frame_num_total": 881,
+    "pre_instructions": [],
+    "problem": {
+        "abolished": false,
+        "issue": false
+    },
+    "annotations": []
+}

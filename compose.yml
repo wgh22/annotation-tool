@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  ros-processor:
+    # 使用当前目录下的 Dockerfile进行构建
+    build: .
+    # 容器名称
+    container_name: ros_data_processor
+    # 保持容器运行 (tty: true)
+    tty: true
+    # 定义卷挂载，将本地目录映射到容器内部
+    # 这样容器就可以访问你的 bag 文件并把输出写回你的本地机器
+    # 对 src 的挂载可以确保您在本地对代码的修改能够立即在容器中生效，无需重新构建镜像
+    volumes:
+      - ./src:/app/src
+      - ./bagdata:/app/bagdata
+      - ./video:/app/video
+    # 你可以覆盖 Dockerfile 中的默认命令
+    # 例如，直接运行处理脚本:
+    # command: >
+    #   bash -c "python3 src/process_data.py --bag_dir ./bagdata --output_dir ./video"
+    # source /opt/ros/noetic/setup.bash
