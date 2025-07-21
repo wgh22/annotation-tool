@@ -16,6 +16,7 @@ Thumbs.db
 *.bag
 *.mp4
 *.png
+*.json
 # 忽略video  bagdata目录下的所有文件
 video/*
 bagdata/*
